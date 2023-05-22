@@ -5,11 +5,11 @@ export class Main extends Component {
     constructor() {
         super();
         this.state = {
-            players: players
+            Player: players
         };
     }
     render() {
-        return <PlayersPresentation players={this.state.players} />
+        return <PlayersPresentation players={this.state.Player} />
     }
 }
 export default Main
