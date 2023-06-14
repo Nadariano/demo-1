@@ -15,11 +15,8 @@
 .App {
   text-align: center;
 }
-.App nav{
-height: 50px; 
-margin-bottom: 1%;
-}
 .App ul{
+  display: flex;
   list-style-type: none;
   padding-left: 0;
   text-align: justify;
@@ -27,6 +24,7 @@ margin-bottom: 1%;
 .App li{
   float: left;
   padding-left: 2%; 
+  
 }
 .App a{
   float: left;
@@ -37,14 +35,16 @@ margin-bottom: 1%;
 .active{
   background-color: rgba(236, 233, 11, 0.849);
 }
+.switch-button{
+  margin-left: 80%; 
+}
 .container{
-  box-sizing: border-box;
-  padding-left: 4%;
-  padding-right: 4%;
+  margin-top: 1%;
+  margin-left: 4%;
+  margin-right: 4%;
 }
 .column{
   float: left;
-  box-sizing: border-box;
   width: 30%;
   margin: 0.5%;
 } 
@@ -123,7 +123,56 @@ margin-bottom: 1%;
 .switch-button{
   margin-right: 5%;
 }
-
+.detail{
+  justify-items: center;
+}
+.detail-container{
+  margin-left: 10%;
+  width: 80%;
+  background-color: #e9e6e6;
+}
+.badge{
+  position: absolute;
+  float: left;
+  margin-top: 2%;
+  font-size: 150%;
+  padding: 1% 2%;  
+  background-color: red;
+  color: whitesmoke;
+  font-weight: 600;
+}
+.player-card{
+  
+}
+.player-info{
+  padding: 2%;
+  background-color: white;
+  margin: 0 1% ;
+  text-align: left;
+  padding-left: 5%;
+}
+.player-tumb {
+  width: 100%;
+}
+.player-tumb img{
+  width: 60%;
+}
+.player-top-details{
+  font-size: 150%;
+}
+.player-price{
+  color: orange;
+  font-size: 150%;
+}
+.player-bottom-details{
+  color:rgb(155, 154, 154);
+}
+.git-link{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.git-link:hover{
+  background-color: rgba(23, 206, 6, 0.8);
+}
 .footer{
   clear:both;
   text-align: center;

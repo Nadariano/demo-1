@@ -1,14 +1,37 @@
 import './App.css';
 import Footer from './components/Footer';
-import Main from './components/Main';
+// import Main from './components/Main';
+import Players from './components/Players';
+import Detail from './components/Detail';
+import Contact from './components/Contact';
 import Navigation from './components/Navigation';
+import {
+  Routes,
+  Route,
+} from "react-router-dom";
+
+// import Counter from './components/Counter';
 function App() {
   return (
+    //   <div className='App'>
+    //     {/* <Navigation/>
+    //     <Main/>
+    //     <Footer/> */}
+
+    //     {/* <Counter/> */}
+    // </div>
     <div className='App'>
       <Navigation/>
-      <Main/>
+      <Routes>
+        <Route path='/' element={<Players/>}>
+        {/* <Route path='/' element={<Main/>}> */}
+        </Route>
+        <Route path='/detail/:id' element={<Detail/>}></Route>
+        <Route path='/contact' element={<Contact/>}></Route>
+      </Routes>
       <Footer/>
     </div>
+
   );
 }
 export default App;
