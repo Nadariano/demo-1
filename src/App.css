@@ -12,7 +12,7 @@
   }
 } */
 
-.App {
+/* .App {
   text-align: center;
 }
 .App ul{
@@ -37,15 +37,15 @@
 }
 .switch-button{
   margin-left: 80%; 
-}
+} */
 .container{
-  margin-top: 1%;
+  margin-top: 10%;
   margin-left: 4%;
   margin-right: 4%;
 }
 .column{
   float: left;
-  width: 30%;
+  width: 32%;
   margin: 0.5%;
 } 
 .card{
@@ -59,11 +59,12 @@
   width: 100%;
 }
 .card button{
-  background-color: black;
+  /* background-color: black; */
   color: white;
   border: none;
   width: 100%;
   height: auto;
+  padding: 2%;
   text-align: center;
 }
 .card button a{
@@ -141,8 +142,8 @@
   color: whitesmoke;
   font-weight: 600;
 }
-.player-card{
-  
+.player-card{ 
+  text-align: center;
 }
 .player-info{
   padding: 2%;
@@ -180,3 +181,9 @@
   color: white;
   padding: 0.5%;
 }
+
+/* Exercise 13: Navbar editted */
+.menu{
+  background-color: rgb(1, 87, 155);
+}
+
