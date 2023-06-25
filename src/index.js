@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { ThemeProvider } from './components/ThemeContext';
+// import { ThemeProvider } from './components/ThemeContext';
 import { BrowserRouter } from 'react-router-dom';
 
 import M from 'materialize-css';
@@ -14,9 +14,9 @@ root.render(
   <React.StrictMode>
 
     <BrowserRouter>
-      <ThemeProvider>
+      {/* <ThemeProvider> */}
         <App/>
-      </ThemeProvider>
+      {/* </ThemeProvider> */}
     </BrowserRouter>
 
   </React.StrictMode>

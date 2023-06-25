@@ -1,15 +1,32 @@
-import { useParams } from 'react-router-dom'
-// import React, { Component } from 'react'
+import { Container, TextInput, Select, Textarea, Icon, Button } from 'react-materialize'
 export default function Contact() {
-    // render() {
+    const handleSubmit = (e) => {
+        e.preventDefault()
+    }
     return (
-        <div class="contact">
-            <h1>This is the conctact page</h1 >
-            <h3>Hello, I am Nadariano</h3>
-            <button className="git-link">
-                <a href="https://github.com/Nadariano" target="_blank">My Github</a>
-            </button>
-        </div>
+        <Container>
+            <h3>Contact Us</h3>
+            <form onSubmit={handleSubmit}>
+                <TextInput id="TextInput-38" label="Your Name" />
+                <TextInput id="TextInput-39" label="Your Phone" />
+                <TextInput email id="TextInput-41" label="Email" validate />
+                <Select id="Select-46" multiple={false} onChange={function noRefCheck() { }} value="">
+                    <option disable value="">
+                        Choose your favourite nation
+                    </option>
+                    <option value="1">
+                        England
+                    </option>
+                    <option value="2">
+                        France
+                    </option>
+                    <option value="3">
+                        Spain
+                    </option>
+                </Select>
+                <Textarea icon={<Icon left >mode_edit</Icon>} id="Textarea-28" label="Your content" />
+                <Button>Submit</Button>
+            </form>
+        </Container>
     )
-    // }
 }

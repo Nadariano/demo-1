@@ -1,35 +1,41 @@
 import { useParams } from 'react-router-dom'
 import { players } from '../shared/ListOfPlayers'
+import { Container, Card, Icon, CardTitle } from 'react-materialize'
+import { useState } from 'react';
+import ModalCase from './ModalCase';
 export default function Detail() {
     const userName = useParams();
     const player = players.find(obj => {
         return obj.id == userName.id;
     });
     let cost = player.cost.toLocaleString();
+    const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div class='container'>
-            <h1>
-                This is details of..
-            </h1>
-            <div className='detail-container'>
-                <div className='player-card'>
-                    <div className='badge'>{player.name}</div>
-                    <div className='player-tumb'>
-                        <img src={`../${player.img}`} alt='' />
-                    </div>
-                    <div className='player-info'>
-                        <div className='player-top-details'>
-                            <h4>{player.club}</h4>
-                        </div>
-                        <div className='player-price'>Market value: € {cost}</div>
-                        <div className='player-bottom-details'>
-                            <p>{player.info}</p>
-                        </div>
-                    </div>
+        <Container style={{ marginTop: '2%' }}>
+            <Card className="detail">
+                <CardTitle image={`../${player.img}`}>{player.name}</CardTitle>
+                <div className="detail-top">
+                    <a onClick={() => setIsOpen(true)} className="btn-floating right waves-effect waves-light red">
+                        <Icon>ondemand_video</Icon>
+                    </a>
                 </div>
-            </div>
 
-        </div>
+                <div className="detail-bot">
+                    <p className='top-info'>
+                        {player.club}
+                    </p>
+                    <p className='mid-info'>
+                        Market value: € {cost}
+                    </p>
+                    <p className='bot-info'>
+                        {player.info}
+                    </p>
+                </div>
+                {isOpen && <ModalCase setIsOpen={setIsOpen} player={player} />}
+
+            </Card>
+        </Container >
+
     )
 }
